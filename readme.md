@@ -55,6 +55,3 @@ git clone https://github.com/your-username/sige.git
 cd sige
 pip install -r requirements.txt
 jupyter notebook outlays.ipynb
-
-
-
