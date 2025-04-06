@@ -55,3 +55,92 @@ git clone https://github.com/your-username/sige.git
 cd sige
 pip install -r requirements.txt
 jupyter notebook outlays.ipynb
+```
+___
+
+## 📦 Dependencies
+
+| Package          | Description                                                      | Link                                                  |
+|------------------|------------------------------------------------------------------|-------------------------------------------------------|
+| numpy            | Numerical computing library                                      | [numpy.org](https://numpy.org/)                      |
+| pandas           | Data manipulation and DataFrames                                 | [pandas.pydata.org](https://pandas.pydata.org/)      |
+| matplotlib       | Plotting and visualization                                       | [matplotlib.org](https://matplotlib.org/)            |
+| seaborn          | Statistical data visualization                                   | [seaborn.pydata.org](https://seaborn.pydata.org/)    |
+| scikit-learn     | ML modeling and metrics                                          | [scikit-learn.org](https://scikit-learn.org/stable/) |
+| xgboost          | Gradient boosting framework (optional)                          | [xgboost.readthedocs.io](https://xgboost.readthedocs.io/) |
+| torch            | PyTorch deep learning library                                    | [pytorch.org](https://pytorch.org/)                  |
+| tensorflow       | End-to-end ML platform                                           | [tensorflow.org](https://www.tensorflow.org/)        |
+| openai           | OpenAI’s Python API client                                       | [openai-python](https://github.com/openai/openai-python) |
+| requests         | HTTP requests for API and web access                             | [requests.readthedocs.io](https://requests.readthedocs.io/) |
+| PySimpleGUI      | GUI framework for desktop apps                                   | [pysimplegui.readthedocs.io](https://pysimplegui.readthedocs.io/) |
+| typing           | Type hinting standard library                                    | [typing Docs](https://docs.python.org/3/library/typing.html) |
+| pyodbc           | ODBC database connector                                          | [pyodbc GitHub](https://github.com/mkleehammer/pyodbc) |
+| fitz             | PDF document parser via PyMuPDF                                  | [pymupdf](https://pymupdf.readthedocs.io/)           |
+| pillow           | Image processing library                                         | [python-pillow.org](https://python-pillow.org/)       |
+| openpyxl         | Excel file processing                                            | [openpyxl Docs](https://openpyxl.readthedocs.io/)     |
+| soundfile        | Read/write sound file formats                                    | [pysoundfile](https://pysoundfile.readthedocs.io/)    |
+| sounddevice      | Audio I/O interface                                              | [sounddevice Docs](https://python-sounddevice.readthedocs.io/) |
+| loguru           | Structured, elegant logging                                      | [loguru GitHub](https://github.com/Delgan/loguru)     |
+| statsmodels      | Statistical tests and regression diagnostics                     | [statsmodels.org](https://www.statsmodels.org/)       |
+| dotenv           | Load environment variables from `.env`                          | [python-dotenv GitHub](https://github.com/theskumar/python-dotenv) |
+| python-dotenv    | Same as above (modern usage)                                     | [python-dotenv](https://saurabh-kumar.com/python-dotenv/) |
+
+---
+
+## 🧪 How to Run
+
+```bash
+git clone https://github.com/your-username/balance-projector.git
+cd balance-projector
+pip install -r requirements.txt
+jupyter notebook balances.ipynb
+```
+
+---
+
+### 📁 Customize Dataset
+
+Replace dataset ingestion cell with:
+
+```python
+import pandas as pd
+df = pd.read_csv("your_dataset.csv")
+X = df.drop("target_column", axis=1)
+y = df["target_column"]
+```
+
+---
+
+### 📊 Outputs
+
+- R², MAE, MSE for each model
+- Bar plots of performance scores
+- Visual predicted vs. actual scatter charts
+- Residual error analysis
+
+---
+
+## 🔮 Roadmap
+
+- [ ] Add time series models (Prophet, ARIMA)
+- [ ] Integrate GridSearchCV for model tuning
+- [ ] SHAP-based interpretability
+- [ ] Flask/FastAPI API for deploying forecasts
+- [ ] LLM summarization of forecast outcomes
+
+---
+
+## 🤝 Contributing
+
+1. 🍴 Fork the project
+2. 🔧 Create a branch: `git checkout -b feat/new-feature`
+3. ✅ Commit and push changes
+4. 📬 Submit a pull request
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
