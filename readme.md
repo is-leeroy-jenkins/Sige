@@ -1,5 +1,6 @@
-– Federal Outlay Projections with Python
+##### Sige
 ![](https://github.com/is-leeroy-jenkins/Sige/blob/master/resources/assets/img/git/SigeProject.png)
+– Federal Outlay Projections with Python
 
 
 **Sige** is a specialized machine learning and time series forecasting tool built for **federal financial analysts**, **budget officers**, and **data scientists** working with **Treasury Account Symbols (TAS)** and **federal outlays**. It combines classical regression, decision trees, gradient boosting, support vector machines, and time series modeling to project **monthly or quarterly outlays** at the Treasury Account level.
