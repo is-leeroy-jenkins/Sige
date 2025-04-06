@@ -56,6 +56,5 @@ cd sige
 pip install -r requirements.txt
 jupyter notebook outlays.ipynb
 
-___
 
 
