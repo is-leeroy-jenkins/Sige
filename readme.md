@@ -55,3 +55,33 @@ git clone https://github.com/your-username/sige.git
 cd sige
 pip install -r requirements.txt
 jupyter notebook outlays.ipynb
+
+
+## 📦 Dependencies
+
+| Package          | Description                                                      | Link                                                  |
+|------------------|------------------------------------------------------------------|-------------------------------------------------------|
+| numpy            | Numerical computing library                                      | [numpy.org](https://numpy.org/)                      |
+| pandas           | Data manipulation and DataFrames                                 | [pandas.pydata.org](https://pandas.pydata.org/)      |
+| matplotlib       | Plotting and visualization                                       | [matplotlib.org](https://matplotlib.org/)            |
+| seaborn          | Statistical data visualization                                   | [seaborn.pydata.org](https://seaborn.pydata.org/)    |
+| scikit-learn     | ML modeling and metrics                                          | [scikit-learn.org](https://scikit-learn.org/stable/) |
+| xgboost          | Gradient boosting framework (optional)                          | [xgboost.readthedocs.io](https://xgboost.readthedocs.io/) |
+| torch            | PyTorch deep learning library                                    | [pytorch.org](https://pytorch.org/)                  |
+| tensorflow       | End-to-end ML platform                                           | [tensorflow.org](https://www.tensorflow.org/)        |
+| openai           | OpenAI’s Python API client                                       | [openai-python](https://github.com/openai/openai-python) |
+| requests         | HTTP requests for API and web access                             | [requests.readthedocs.io](https://requests.readthedocs.io/) |
+| PySimpleGUI      | GUI framework for desktop apps                                   | [pysimplegui.readthedocs.io](https://pysimplegui.readthedocs.io/) |
+| typing           | Type hinting standard library                                    | [typing Docs](https://docs.python.org/3/library/typing.html) |
+| pyodbc           | ODBC database connector                                          | [pyodbc GitHub](https://github.com/mkleehammer/pyodbc) |
+| fitz             | PDF document parser via PyMuPDF                                  | [pymupdf](https://pymupdf.readthedocs.io/)           |
+| pillow           | Image processing library                                         | [python-pillow.org](https://python-pillow.org/)       |
+| openpyxl         | Excel file processing                                            | [openpyxl Docs](https://openpyxl.readthedocs.io/)     |
+| soundfile        | Read/write sound file formats                                    | [pysoundfile](https://pysoundfile.readthedocs.io/)    |
+| sounddevice      | Audio I/O interface                                              | [sounddevice Docs](https://python-sounddevice.readthedocs.io/) |
+| loguru           | Structured, elegant logging                                      | [loguru GitHub](https://github.com/Delgan/loguru)     |
+| statsmodels      | Statistical tests and regression diagnostics                     | [statsmodels.org](https://www.statsmodels.org/)       |
+| dotenv           | Load environment variables from `.env`                          | [python-dotenv GitHub](https://github.com/theskumar/python-dotenv) |
+| python-dotenv    | Same as above (modern usage)                                     | [python-dotenv](https://saurabh-kumar.com/python-dotenv/) |
+
+---
