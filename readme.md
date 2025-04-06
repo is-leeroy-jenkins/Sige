@@ -56,7 +56,7 @@ cd sige
 pip install -r requirements.txt
 jupyter notebook outlays.ipynb
 
-
+___
 ## 📦 Dependencies
 
 | Package          | Description                                                      | Link                                                  |
@@ -85,3 +85,5 @@ jupyter notebook outlays.ipynb
 | python-dotenv    | Same as above (modern usage)                                     | [python-dotenv](https://saurabh-kumar.com/python-dotenv/) |
 
 ---
+
+
