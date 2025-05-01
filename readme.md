@@ -20,21 +20,24 @@ Sige is a specialized machine learning and time series forecasting tool built fo
 - Extract features from **monthly or quarterly outlay data**
 - Train and compare multiple models across time slices
 
-### 🔢 Models Included
 
-| Model                     | Type         | Module                              |
-|--------------------------|--------------|-------------------------------------|
-| Linear Regression         | Classical ML | `sklearn.linear_model.LinearRegression` |
-| Decision Tree Regressor  | Tree-Based   | `sklearn.tree.DecisionTreeRegressor` |
-| Random Forest Regressor  | Ensemble     | `sklearn.ensemble.RandomForestRegressor` |
-| Gradient Boosting Regressor | Ensemble | `sklearn.ensemble.GradientBoostingRegressor` |
-| Support Vector Regressor (SVR) | Kernel-Based | `sklearn.svm.SVR`                |
-| ARIMA                    | Time Series  | `statsmodels.tsa.arima.model.ARIMA` |
+### 🧠 Machine Learning Regressors
+| Model                         | Type            | Library                                |
+|------------------------------|------------------|----------------------------------------|
+| Linear Regression            | Parametric       | `sklearn.linear_model.LinearRegression` |
+| Decision Tree Regressor      | Tree-Based       | `sklearn.tree.DecisionTreeRegressor`    |
+| Random Forest Regressor      | Ensemble         | `sklearn.ensemble.RandomForestRegressor` |
+| Gradient Boosting Regressor  | Ensemble         | `sklearn.ensemble.GradientBoostingRegressor` |
+| XGBoost Regressor            | Boosting (Extra) | `xgboost.XGBRegressor` *(optional)*     |
+| SVR (Support Vector Regressor) | Kernel-Based   | `sklearn.svm.SVR`                       |
 
-### 📊 Forecast Targets
-- **Monthly/quarterly outlays**
-- **End-of-year projections**
-- **Year-over-year outlay trends**
+### 🕰️ Time Series Models
+| Model     | Library                          |
+|-----------|----------------------------------|
+| ARIMA     | `statsmodels.tsa.arima.model.ARIMA` |
+| Prophet (Planned) | `prophet` *(future)*     |
+
+---
 
 ### 🧮 Visual Analysis
 - Forecast vs. Actual Plots
@@ -46,6 +49,51 @@ Sige is a specialized machine learning and time series forecasting tool built fo
 - Built for **federal financial analysts**
 - Structured around **Treasury Account Symbols (TAS)**
 - Extendable to SF-133 and MAX Schedule A/B formats
+
+---
+
+## 🔬 Features
+
+### 📈 End-to-End Forecasting Pipeline
+- Ingests TAS outlay data from SF-133-style reports
+- Extracts and transforms lagged, rolling, and time-based features
+- Evaluates and compares multiple ML and time series models
+- Supports target normalization and log transformations
+
+### 🔁 Feature Engineering
+- Rolling average features (e.g., 3-month trailing)
+- Lag features (e.g., t-1, t-2)
+- Month and quarter encodings
+- Log1p transforms to stabilize variance in skewed data
+
+### 📊 Evaluation Metrics
+- **R²**, **MAE**, **MSE**, **RMSE**
+- **MAPE** and percent error (planned)
+- Comparison plots across models
+
+### 🧮 Visual Diagnostics
+- Forecast vs. Actual line plots
+- Scatter plots of predicted vs. actual
+- Residual error distributions
+- Multi-model score bar charts
+- Time-based faceted error panels
+
+### 🏛️ Government-Tailored Design
+- Treasury Account Symbol (TAS)-centric processing
+- Integrates seamlessly with SF-133, GTAS, MAX A/B formats
+- Ideal for fiscal year and policy-driven forecasting
+
+---
+
+## 🧪 Output Artifacts
+
+| Output                          | Description                                 |
+|---------------------------------|---------------------------------------------|
+| Model Metrics CSV               | Tabular file of all evaluation scores       |
+| Plots (PNG/HTML)                | All forecast visualizations                 |
+| Residual Error Charts           | Distribution & temporal residual patterns   |
+| Forecast Sheets (Excel planned) | Side-by-side predicted vs. actual tables    |
+| Model Timings                   | Training + inference time profiling         |
 
 ---
 
