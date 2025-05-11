@@ -35,7 +35,7 @@ Sige is a specialized machine learning and time series forecasting tool built fo
 | Model     | Library                          |
 |-----------|----------------------------------|
 | ARIMA     | `statsmodels.tsa.arima.model.ARIMA` |
-| Prophet (Planned) | `prophet` *(future)*     |
+
 
 ---
 
