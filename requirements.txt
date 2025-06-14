@@ -1,4 +1,4 @@
-PySimpleGUI
+FreeSimpleGUI
 typing
 numpy
 openai
