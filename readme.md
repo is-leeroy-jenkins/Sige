@@ -50,26 +50,26 @@ ___
 
 ---
 
-## 🔬 Features
+### 🔬 Features
 
-### 📈 End-to-End Forecasting Pipeline
+#### 📈 End-to-End Forecasting Pipeline
 - Ingests TAS outlay data from SF-133-style reports
 - Extracts and transforms lagged, rolling, and time-based features
 - Evaluates and compares multiple ML and time series models
 - Supports target normalization and log transformations
 
-### 🔁 Feature Engineering
+#### 🔁 Feature Engineering
 - Rolling average features (e.g., 3-month trailing)
 - Lag features (e.g., t-1, t-2)
 - Month and quarter encodings
 - Log1p transforms to stabilize variance in skewed data
 
-### 📊 Evaluation Metrics
+#### 📊 Evaluation Metrics
 - **R²**, **MAE**, **MSE**, **RMSE**
 - **MAPE** and percent error (planned)
 - Comparison plots across models
 
-### 🧮 Visual Diagnostics
+#### 🧮 Visual Diagnostics
 - Forecast vs. Actual line plots
 - Scatter plots of predicted vs. actual
 - Residual error distributions
@@ -83,7 +83,7 @@ ___
 
 ---
 
-## 🧪 Output Artifacts
+### 🧪 Output Artifacts
 
 | Output                          | Description                                 |
 |---------------------------------|---------------------------------------------|
@@ -95,9 +95,9 @@ ___
 
 ---
 
-## 📁 How to Use
+### 📁 How to Use
 
-### 🔧 Setup
+#### 🔧 Setup
 
 ```bash
 git clone https://github.com/your-username/sige.git
@@ -107,7 +107,7 @@ jupyter notebook outlays.ipynb
 ```
 ___
 
-## 📦 Dependencies
+### 📦 Dependencies
 
 | Package          | Description                                                      | Link                                                  |
 |------------------|------------------------------------------------------------------|-------------------------------------------------------|
@@ -136,7 +136,7 @@ ___
 
 ---
 
-## 🧪 How to Run
+### 🧪 How to Run
 
 ```bash
 git clone https://github.com/your-username/balance-projector.git
@@ -169,7 +169,7 @@ y = df["target_column"]
 
 ---
 
-## 🔮 Roadmap
+### 🔮 Roadmap
 
 - [ ] Add time series models (Prophet, ARIMA)
 - [ ] Integrate GridSearchCV for model tuning
@@ -179,7 +179,7 @@ y = df["target_column"]
 
 ---
 
-## 🤝 Contributing
+### 🤝 Contributing
 
 1. 🍴 Fork the project
 2. 🔧 Create a branch: `git checkout -b feat/new-feature`
@@ -188,7 +188,7 @@ y = df["target_column"]
 
 ---
 
-## 📜 License
+### 📜 License
 
 This project is licensed under the **MIT License**.
 
