@@ -186,10 +186,9 @@ y = df["target_column"]
 3. ✅ Commit and push changes
 4. 📬 Submit a pull request
 
----
+## 📝 License
 
-### 📜 License
+Sige is published under the [MIT General Public License v3](https://github.com/is-leeroy-jenkins/Sige/blob/main/LICENSE).
 
-This project is licensed under the **MIT License**.
 
 ---
