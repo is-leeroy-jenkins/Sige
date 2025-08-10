@@ -188,7 +188,7 @@ y = df["target_column"]
 
 ## 📝 License
 
-Sige is published under the [MIT General Public License v3](https://github.com/is-leeroy-jenkins/Sige/blob/main/LICENSE).
+Sige is published under the [MIT General Public License v3](https://github.com/is-leeroy-jenkins/Sige/blob/master/LICENSE.txt).
 
 
 ---
