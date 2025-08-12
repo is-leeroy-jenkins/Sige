@@ -216,7 +216,7 @@ y = df["target_column"]
 4. 📬 Submit a pull request
 
 > **Disclaimer**: This is for analytical exploration, research, and education purposes.  
-> It is **not** an official OMB/Treasury product; validate against authoritative sources before use.
+> It is **not** an official government product; validate against authoritative sources before use.
 
 ## 📝 License
 
