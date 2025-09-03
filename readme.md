@@ -82,7 +82,7 @@ Sige is a specialized machine learning and time series forecasting tool built fo
 - Integrates seamlessly with SF-133, GTAS, MAX A/B formats
 - Ideal for fiscal year and policy-driven forecasting
 
----
+
 
 ## 🧪 Output Artifacts
 
@@ -94,7 +94,7 @@ Sige is a specialized machine learning and time series forecasting tool built fo
 | Forecast Sheets (Excel planned) | Side-by-side predicted vs. actual tables    |
 | Model Timings                   | Training + inference time profiling         |
 
----
+
 
 ## 📁 How to Use
 
