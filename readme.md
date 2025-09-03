@@ -5,13 +5,13 @@
 
 Sige is a specialized machine learning and time series forecasting tool built for federal analysts, budget officers, and data scientists working with  Treasury Account Symbols (TAS)  and  federal outlays. It combines classical regression, decision trees, gradient boosting, support vector machines, and time series modeling to project **monthly or quarterly outlays** at the Treasury Account level.
 
-### Outlay Projection Tool
+#### Outlay Projection Tool
 <a href="https://colab.research.google.com/github/is-leeroy-jenkins/Sige/blob/master/outlays.ipynb" target="_parent">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 ___
 
-### 🚀 Features
+## 🚀 Features
 
 #### 📈 Full-Funnel Forecasting Pipeline
 - Load and structure TAS-level outlay data from SF-133-style or custom tabular reports
@@ -19,7 +19,7 @@ ___
 - Train and compare multiple models across time slices
 
 
-### 🧠 Machine Learning Regressors
+## 🧠 Machine Learning Regressors
 | Model                         | Type            | Library                                |
 |------------------------------|------------------|----------------------------------------|
 | Linear Regression            | Parametric       | `sklearn.linear_model.LinearRegression` |
@@ -29,28 +29,29 @@ ___
 | XGBoost Regressor            | Boosting (Extra) | `xgboost.XGBRegressor` *(optional)*     |
 | SVR (Support Vector Regressor) | Kernel-Based   | `sklearn.svm.SVR`                       |
 
-### 🕰️ Time Series Models
+
+## 🕰️ Time Series Models
 | Model     | Library                          |
 |-----------|----------------------------------|
 | ARIMA     | `statsmodels.tsa.arima.model.ARIMA` |
 
 
----
 
-### 🧮 Visual Analysis
+
+## 🧮 Visual Analysis
 - Forecast vs. Actual Plots
 - Residual error visualization
 - Multi-model comparison tables
 - Rolling and lagged error summaries
 
-### 🏛️ Government-Focused Design
+## 🏛️ Government-Focused Design
 - Built for **federal financial analysts**
 - Structured around **Treasury Account Symbols (TAS)**
 - Extendable to SF-133 and MAX Schedule A/B formats
 
----
 
-### 🔬 Features
+
+## 🔬 Features
 
 #### 📈 End-to-End Forecasting Pipeline
 - Ingests TAS outlay data from SF-133-style reports
@@ -76,14 +77,14 @@ ___
 - Multi-model score bar charts
 - Time-based faceted error panels
 
-### 🏛️ Government-Tailored Design
+## 🏛️ Government-Tailored Design
 - Treasury Account Symbol (TAS)-centric processing
 - Integrates seamlessly with SF-133, GTAS, MAX A/B formats
 - Ideal for fiscal year and policy-driven forecasting
 
 ---
 
-### 🧪 Output Artifacts
+## 🧪 Output Artifacts
 
 | Output                          | Description                                 |
 |---------------------------------|---------------------------------------------|
@@ -95,7 +96,7 @@ ___
 
 ---
 
-### 📁 How to Use
+## 📁 How to Use
 
 #### 🔧 Setup
 
@@ -106,7 +107,7 @@ pip install -r requirements.txt
 jupyter notebook outlays.ipynb
 ```
 
-### 🎯 Quickstart
+## 🎯 Quickstart
 
 #### Option A — Google Colab (no local setup)
 
@@ -134,9 +135,44 @@ jupyter notebook
 Open `ipynb/sige.ipynb` and run cells top-to-bottom.
 
 
-___
 
-### 📦 Dependencies
+## 📊 Descriptive Statistics
+
+| Statistic         | Description                             | Use in Budget Analysis                                               |
+|------------------|-----------------------------------------|----------------------------------------------------------------------|
+| **Mean**         | Average value                           | Avg. Outlays, Obligations, etc., across accounts                |
+| **Median**       | Middle value                            | Robust central tendency in skewed financial data                    |
+| **Mode**         | Most frequent value                     | Identify common MainAccountCodes or Availability categories     |
+| **Standard Deviation** | Spread around the mean                | Indicates variability in execution rates or balances                |
+| **Variance**     | Square of standard deviation            | Used in statistical tests and model diagnostics                     |
+| **Range**        | Difference between max and min          | Measures total spread of financial metrics                          |
+| **Interquartile Range (IQR)** | Spread of middle 50% of data           | Identifies budget outliers and extreme accounts                     |
+| **Skewness**     | Asymmetry of distribution               | Skewed obligations suggest few accounts dominate totals             |
+| **Kurtosis**     | "Peakedness" of distribution            | High values indicate outlier-prone financial data                   |
+
+
+
+
+
+## 🔍 Inferrential Statistics
+
+
+| Metric           | Description                                            | Use in Budget Analysis                                               |
+|-------------------------|--------------------------------------------------------|----------------------------------------------------------------------|
+| **Pearson Correlation** | Linear relationship between variables                  | E.g., TotalResources vs. Obligations                                 |
+| **Spearman Correlation**| Monotonic (rank-based) relationship                    | More robust to non-linear trends in financial execution              |
+| **t-test**              | Compare means between 2 groups                         | Discretionary vs. Mandatory accounts' execution rates                |
+| **ANOVA**               | Compare means across multiple groups                   | Obligations across availability periods or account types             |
+| **Chi-square Test**     | Categorical independence                               | Are Main Account Codes related to availability or a specific agency? |
+| **Confidence Intervals**| Estimate range of a population mean                    | Upper and lower bound expected obligations or recoveries             |
+| **Regression Coefficients (p-values)** | Test variable significance                             | Are Recoveries a significant predictor of UnobligatedBalance?        |
+| **F-statistic (overall regression)**   | Test whole model fit                                   | Determines the combined influence of all predictors                  |
+| **Z-score / Outlier Tests** | Deviation from standard mean                           | Identify abnormal balances or lapse rates                            |
+| **Boxplots**            | Visual outlier detection                               | Discover obligation anomalies within agencies                        |
+
+
+
+## 📦 Dependencies
 
 | Package          | Description                                                      | Link                                                  |
 |------------------|------------------------------------------------------------------|-------------------------------------------------------|
@@ -165,7 +201,7 @@ ___
 
 ---
 
-### 🧪 How to Run
+## 🧪 How to Run
 
 ```bash
 git clone https://github.com/your-username/balance-projector.git
@@ -174,9 +210,9 @@ pip install -r requirements.txt
 jupyter notebook balances.ipynb
 ```
 
----
 
-### 📁 Customize Dataset
+
+## 📁 Customize Dataset
 
 Replace dataset ingestion cell with:
 
@@ -187,35 +223,18 @@ X = df.drop("target_column", axis=1)
 y = df["target_column"]
 ```
 
----
 
-### 📊 Outputs
+
+## 📊 Outputs
 
 - R², MAE, MSE for each model
 - Bar plots of performance scores
 - Visual predicted vs. actual scatter charts
 - Residual error analysis
 
----
 
-### 🔮 Roadmap
 
-- [ ] Add time series models (Prophet, ARIMA)
-- [ ] Integrate GridSearchCV for model tuning
-- [ ] SHAP-based interpretability
-- [ ] Flask/FastAPI API for deploying forecasts
-- [ ] LLM summarization of forecast outcomes
-
----
-
-### 🤝 Contributing
-
-1. 🍴 Fork the project
-2. 🔧 Create a branch: `git checkout -b feat/new-feature`
-3. ✅ Commit and push changes
-4. 📬 Submit a pull request
-
-> **Disclaimer**: This is for analytical exploration, research, and education purposes.  
+> **Disclaimer**: This is for analytical exploration and research purposes.  
 > It is **not** an official government product; validate against authoritative sources before use.
 
 ## 📝 License
