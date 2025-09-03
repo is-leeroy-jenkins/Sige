@@ -199,7 +199,7 @@ Open `ipynb/sige.ipynb` and run cells top-to-bottom.
 | dotenv           | Load environment variables from `.env`                          | [python-dotenv GitHub](https://github.com/theskumar/python-dotenv) |
 | python-dotenv    | Same as above (modern usage)                                     | [python-dotenv](https://saurabh-kumar.com/python-dotenv/) |
 
----
+
 
 ## 🧪 How to Run
 
@@ -242,4 +242,3 @@ y = df["target_column"]
 Sige is published under the [MIT General Public License v3](https://github.com/is-leeroy-jenkins/Sige/blob/master/LICENSE.txt).
 
 
----
