@@ -17,6 +17,7 @@ scipy
 seaborn
 soundfile
 sounddevice
+streamlit
 loguru
 statsmodels
 dotenv

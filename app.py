@@ -147,7 +147,7 @@ def load_outlays_excel( file_bytes: bytes, sheet_name: str ) -> pd.DataFrame:
 	throw_if( 'file_bytes', file_bytes )
 	throw_if( 'sheet_name', sheet_name )
 	
-	df = pd.read_excel( file_bytes, sheet_name=sheet_name )
+	df = pd.read_excel( io=file_bytes, sheet_name=sheet_name )
 	return df
 
 def to_long_format( df_raw: pd.DataFrame ) -> pd.DataFrame:
@@ -181,12 +181,12 @@ def to_long_format( df_raw: pd.DataFrame ) -> pd.DataFrame:
 	df_long = df_raw.melt(
 		id_vars=id_vars,
 		value_vars=fy_cols,
-		var_name='FiscalYear',
+		var_name='FY',
 		value_name='Outlays',
 	)
 	
-	df_long[ 'FiscalYear' ] = df_long[
-		'FiscalYear' ].astype( str ).str.replace( 'FY', "", regex=False ).astype( int )
+	df_long[ 'FY' ] = df_long[
+		'FY' ].astype( str ).str.replace( 'FY', "", regex=False ).astype( int )
 	df_long[ 'Outlays' ] = pd.to_numeric( df_long[ 'Outlays' ], errors='coerce' )
 	
 	# Clean: drop NaNs; replace zeros with NaN then fill where appropriate later per aggregation.
