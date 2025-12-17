@@ -22,3 +22,4 @@ statsmodels
 dotenv
 python-dotenv
 openai
+streamlit
