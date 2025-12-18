@@ -5,9 +5,6 @@
 
 Sige is a specialized machine learning and time series forecasting tool built for federal analysts, budget officers, and data scientists working with  Treasury Account Symbols (TAS)  and  federal outlays. It combines classical regression, decision trees, gradient boosting, support vector machines, and time series modeling to project **monthly or quarterly outlays** at the Treasury Account level.
 
-#### Outlay Projection Tool
-<a href="https://colab.research.google.com/github/is-leeroy-jenkins/Sige/blob/master/outlays.ipynb" target="_parent">
-<img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 
 
@@ -107,9 +104,12 @@ pip install -r requirements.txt
 jupyter notebook outlays.ipynb
 ```
 
-## 🎯 Quickstart
+## 🎯 Quickstart (Colab)
 
 #### Option A — Google Colab (no local setup)
+<a href="https://colab.research.google.com/github/is-leeroy-jenkins/Sige/blob/master/outlays.ipynb" target="_parent">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
 
 1. Click the **Open In Colab** badge above.
 2. Upload your CSV or mount Google Drive.
@@ -134,9 +134,7 @@ jupyter notebook
 
 Open `ipynb/sige.ipynb` and run cells top-to-bottom.
 
-Below is a **drop-in README section**, written for an end user, that you can paste directly into your existing `README.md`. It is intentionally practical, conservative, and aligned with standard Python/Streamlit workflows.
 
----
 
 ## 🚀 Quickstart (Streamlit)
 
