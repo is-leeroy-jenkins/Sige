@@ -134,6 +134,114 @@ jupyter notebook
 
 Open `ipynb/sige.ipynb` and run cells top-to-bottom.
 
+Below is a **drop-in README section**, written for an end user, that you can paste directly into your existing `README.md`. It is intentionally practical, conservative, and aligned with standard Python/Streamlit workflows.
+
+---
+
+## 🚀 Quickstart (Streamlit)
+
+This application is delivered as a Streamlit web app (`app.py`) that allows users to upload historical federal outlay data (Excel format), explore trends, and generate multi-model forecasts.
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+* **Python 3.10 or newer**
+* **Git**
+* **pip** (comes with Python)
+
+You can verify your Python version with:
+
+```
+python --version
+```
+
+---
+
+### 1️⃣ Clone the Repository
+
+Clone the Sige repository to your local machine:
+
+```
+git clone https://github.com/<your-org-or-username>/sige.git
+cd sige
+```
+
+---
+
+### 2️⃣ Create a Virtual Environment (Recommended)
+
+Using a virtual environment is strongly recommended to avoid dependency conflicts.
+
+**Windows (PowerShell):**
+
+```
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+**macOS / Linux:**
+
+```
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+---
+
+### 3️⃣ Install Dependencies
+
+Install the required Python packages:
+
+```
+pip install -r requirements.txt
+```
+
+If a `requirements.txt` file is not present, the core dependencies are:
+
+* streamlit
+* pandas
+* numpy
+* matplotlib
+* scikit-learn
+* statsmodels
+* openpyxl
+
+---
+
+### 4️⃣ Launch the Streamlit App
+
+Run the application with:
+
+```
+streamlit run app.py
+```
+
+After a few seconds, Streamlit will open the app automatically in your default web browser (typically at `http://localhost:8501`).
+
+---
+
+### 5️⃣ Using the Application
+
+1. Upload an Excel file containing historical outlays with fiscal year columns (e.g., `FY2012`, `FY2013`, …).
+2. Specify the worksheet name (default: `Data`).
+3. Configure the training window and forecast years in the sidebar.
+4. Review:
+
+   * Aggregated outlays by fiscal year
+   * Regression model performance
+   * Forecasts from regression, ARIMA, and Holt-Winters models
+5. Export results as CSV files from the **Export** tab.
+
+---
+
+### Notes
+
+* The app runs entirely locally; no data is transmitted externally.
+* Large Excel files may take a few seconds to process on first upload.
+* Refreshing the browser will reset the app state.
+
+
 
 
 ## 📊 Descriptive Statistics
