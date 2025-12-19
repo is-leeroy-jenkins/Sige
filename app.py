@@ -417,9 +417,9 @@ def main( ) -> None:
 	Returns:
 		None
 	"""
-	st.set_page_config( page_title='Sige | Federal Outlay Projections', layout='wide' )
+	st.set_page_config( page_title='Sige', layout='wide' )
 	
-	st.title( 'Sige — Federal Outlay Projections' )
+	st.title( 'Outlay Projections' )
 	st.caption( 'Upload historical outlays (FY columns), explore trends, and compare forecasting '
 	            'models.' )
 	
