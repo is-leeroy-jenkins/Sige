@@ -110,13 +110,13 @@ jupyter notebook outlays.ipynb
 <a href="https://colab.research.google.com/github/is-leeroy-jenkins/Sige/blob/master/outlays.ipynb" target="_parent">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
+![](https://github.com/is-leeroy-jenkins/Sige/blob/master/resources/assets/Sige-nb.gif)
 
 1. Click the **Open In Colab** badge above.
 2. Upload your CSV or mount Google Drive.
 3. Set `DATA_PATH` near the top of the notebook.
 4. **Runtime → Run all**.
 
-![](https://github.com/is-leeroy-jenkins/Sige/blob/master/resources/assets/Sige-nb.gif)
 #### Option B — Local (conda or venv)
 
 ```
@@ -139,7 +139,9 @@ Open `ipynb/sige.ipynb` and run cells top-to-bottom.
 
 ## 🚀 Quickstart (Streamlit)
 
-This application is delivered as a Streamlit web app (`app.py`) that allows users to upload historical federal outlay data (Excel format), explore trends, and generate multi-model forecasts.
+![](https://github.com/is-leeroy-jenkins/Sige/blob/master/resources/assets/Sige-Py.gif)
+
+- This application is delivered as a Streamlit web app (`app.py`) that allows users to upload historical federal outlay data (Excel format), explore trends, and generate multi-model forecasts.
 
 ### Prerequisites
 
@@ -154,8 +156,6 @@ You can verify your Python version with:
 ```
 python --version
 ```
-
-![](https://github.com/is-leeroy-jenkins/Sige/blob/master/resources/assets/Sige-Py.gif)
 
 ### 1️⃣ Clone the Repository
 
