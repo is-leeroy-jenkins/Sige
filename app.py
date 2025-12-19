@@ -408,16 +408,18 @@ def plot_series( df_grouped: pd.DataFrame, title: str ) -> plt.Figure:
 
 def main( ) -> None:
 	"""
-	Purpose:
+	
+		Purpose:
 		Entry point for Streamlit application.
-
-	Parameters:
+	
+		Parameters:
 		None
-
-	Returns:
+	
+		Returns:
 		None
+	
 	"""
-	st.set_page_config( page_title='Sige', layout='wide' )
+	st.set_page_config( page_title='Sige', layout='wide', page_icon=r'resources/assets/favicon.ico' )
 	
 	st.title( 'Outlay Projections' )
 	st.caption( 'Upload historical outlays (FY columns), explore trends, and compare forecasting '

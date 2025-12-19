@@ -154,7 +154,7 @@ You can verify your Python version with:
 python --version
 ```
 
----
+![](https://github.com/is-leeroy-jenkins/Sige/blob/master/resources/assets/Sige-Py.gif)
 
 ### 1️⃣ Clone the Repository
 
