@@ -116,6 +116,7 @@ jupyter notebook outlays.ipynb
 3. Set `DATA_PATH` near the top of the notebook.
 4. **Runtime → Run all**.
 
+![](https://github.com/is-leeroy-jenkins/Sige/blob/master/resources/assets/Sige-nb.gif)
 #### Option B — Local (conda or venv)
 
 ```
