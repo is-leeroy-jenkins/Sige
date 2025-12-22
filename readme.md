@@ -139,6 +139,8 @@ Open `ipynb/sige.ipynb` and run cells top-to-bottom.
 
 ## 🚀 Quickstart (Streamlit)
 
+[![Streamlit App](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white)](https://sige-py.streamlit.app/)
+
 ![](https://github.com/is-leeroy-jenkins/Sige/blob/master/resources/assets/Sige-Py.gif)
 
 - This application is delivered as a Streamlit web app (`app.py`) that allows users to upload historical federal outlay data (Excel format), explore trends, and generate multi-model forecasts.
