@@ -6,7 +6,7 @@
 # --------------------------------------------------------------------------------------------------
 # Purpose:
 #     Streamlit application for federal outlay analysis with:
-#       • Upload OR fallback loader
+#       • Upload OR user-controlled fallback loader
 #       • Agency × Main Account × TAS slicing
 #       • Data-derived fiscal-year bounds
 #       • Multi-model regression
@@ -74,11 +74,19 @@ def load_outlays_excel(file_bytes: bytes, sheet_name: str) -> pd.DataFrame:
 
 def load_outlays_with_fallback(
     upload: Optional[st.runtime.uploaded_file_manager.UploadedFile],
+    use_fallback: bool,
     sheet_name: str,
-    fallback_path: str = r"data/Budget Outlays.xlsx",
+    fallback_path: str = r"data\Budget Outlays.xlsx",
 ) -> pd.DataFrame:
+    """
+    Load data based on explicit user intent.
+    Upload always takes precedence if present.
+    """
     if upload is not None:
         return load_outlays_excel(upload.getvalue(), sheet_name)
+
+    if not use_fallback:
+        raise RuntimeError("No upload provided and fallback loading is disabled.")
 
     path = Path(fallback_path)
     if not path.exists():
@@ -260,24 +268,35 @@ def fit_predict_time_series(
 # --------------------------------------------------------------------------------------------------
 
 def main() -> None:
-    st.set_page_config(page_title="Sige", layout="wide", page_icon=r'resources/assets/favicon.ico' )
+    st.set_page_config(page_title="Sige", layout="wide", page_icon=r'resources/assets/favicon.ico')
     st.title("Federal Outlay Projector")
 
     with st.sidebar:
+        use_fallback = st.checkbox(
+            "Use fallback data",
+            value=True,
+        )
+
         upload = st.file_uploader("Upload Excel (.xlsx)", type=["xlsx"])
         sheet = st.text_input("Sheet name", value="Data")
 
+        st.caption(
+            "Data source: "
+            + ("Upload" if upload is not None else "Fallback" if use_fallback else "None")
+        )
+
     try:
-        df_raw = load_outlays_with_fallback(upload, sheet)
+        df_raw = load_outlays_with_fallback(
+            upload=upload,
+            use_fallback=use_fallback,
+            sheet_name=sheet,
+        )
         df_long = to_long_format(df_raw)
     except Exception as ex:
         st.error(f"Data load failed: {ex}")
         st.stop()
 
-    # ---------------------------
-    # Fiscal-year bounds (derived)
-    # ---------------------------
-
+    # Fiscal-year bounds derived from data
     fy_min = int(df_long["FiscalYear"].min())
     fy_max = int(df_long["FiscalYear"].max())
 
@@ -299,10 +318,7 @@ def main() -> None:
         q = st.number_input("ARIMA q", 0, 10, 0)
         season = st.number_input("HW seasonal_periods", 1, 20, 5)
 
-    # ---------------------------
     # Hierarchical slicing
-    # ---------------------------
-
     agency = None
     if "AgencyName" in df_long.columns:
         agency = st.selectbox(
