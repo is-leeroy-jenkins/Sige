@@ -260,8 +260,8 @@ def fit_predict_time_series(
 # --------------------------------------------------------------------------------------------------
 
 def main() -> None:
-    st.set_page_config(page_title="Sige | Federal Outlay Projections", layout="wide")
-    st.title("Sige — Federal Outlay Projections")
+    st.set_page_config(page_title="Sige", layout="wide", page_icon=r'resources/assets/favicon.ico' )
+    st.title("Federal Outlay Projector")
 
     with st.sidebar:
         upload = st.file_uploader("Upload Excel (.xlsx)", type=["xlsx"])
