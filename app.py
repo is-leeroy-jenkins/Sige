@@ -75,7 +75,7 @@ def load_outlays_excel(file_bytes: bytes, sheet_name: str) -> pd.DataFrame:
 def load_outlays_with_fallback(
     upload: Optional[st.runtime.uploaded_file_manager.UploadedFile],
     sheet_name: str,
-    fallback_path: str = r"data\Budget Outlays.xlsx",
+    fallback_path: str = r"data/Budget Outlays.xlsx",
 ) -> pd.DataFrame:
     if upload is not None:
         return load_outlays_excel(upload.getvalue(), sheet_name)
