@@ -76,7 +76,7 @@ def load_outlays_with_fallback(
     upload: Optional[st.runtime.uploaded_file_manager.UploadedFile],
     use_fallback: bool,
     sheet_name: str,
-    fallback_path: str = r"data\Budget Outlays.xlsx",
+    fallback_path: str = r"data/Budget Outlays.xlsx",
 ) -> pd.DataFrame:
     """
     Load data based on explicit user intent.
