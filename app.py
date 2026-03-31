@@ -484,7 +484,7 @@ def main() -> None:
 
     # ---------------------- Filters
     st.divider( )
-    st.text( 'Filters' )
+    st.markdown( '#### Filters' )
     ftr_c1, ftr_c2, ftr_c3 = st.columns( [ 0.33, 0.33, 0.33 ], border=True )
     with ftr_c1:
 	    agency = None
@@ -529,18 +529,18 @@ def main() -> None:
     cfg = ForecastConfig( min_fy=min_fy, max_fy=max_fy, future_years=(int( f1 ), int( f2 )), )
     
     st.divider( )
-    st.text( 'Aggregated Outlays' )
+    st.markdown( '#### Aggregated Outlays' )
     st.data_editor( df_grouped, use_container_width=True )
     
     metrics, forecasts = fit_predict_regressions( df_grouped, cfg )
     ts = fit_predict_time_series( df_grouped, cfg, (p, d, q), season )
     
     st.divider( )
-    st.text( 'Regression Performance' )
+    st.markdown( '#### Regression Performance' )
     st.data_editor( metrics, use_container_width=True )
     
     st.divider( )
-    st.text('Forecasts')
+    st.markdown( '#### Forecasts')
     st.data_editor( pd.concat( [ forecasts, ts ], axis=1 ),  use_container_width=True, )
 
 if __name__ == "__main__":
