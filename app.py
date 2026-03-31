@@ -438,7 +438,7 @@ def main() -> None:
     st.logo( LOGO, size='large' )
     st.header( 'Outlay Projector' )
     st.divider( )
-    st.text( 'Parameters' )
+    st.markdown( '#### Parameters' )
 
     # ---------------------- Sidebar
     with st.sidebar:
