@@ -68,13 +68,6 @@ from sklearn.preprocessing import PolynomialFeatures
 from statsmodels.tsa.arima.model import ARIMA
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
 
-# --------------------------------------------------------------------------------------------------
-# CONSTANTS
-# --------------------------------------------------------------------------------------------------
-LOGO = r'resources/sige_logo.ico'
-FAVICON = r'resources/assets/favicon.ico'
-BLUE_DIVIDER = "<div style='height:2px;align:left;background:#0078FC;margin:6px 0 10px 0;'></div>"
-
 # =====================================================
 # Utilities
 # =====================================================
@@ -166,6 +159,11 @@ def categorical_columns( df: pd.DataFrame ) -> list[ str ]:
 	if df is None or df.empty:
 		return [ ]
 	return df.select_dtypes( include=[ 'object', 'category' ] ).columns.tolist( )
+
+# ---------------------- Constants
+FAVICON = cfg.FAVICON
+DATA = cfg.DATA
+LOGO = cfg.LOGO
 
 # ---------------------- Config
 @dataclass(frozen=True)
@@ -460,9 +458,8 @@ def render_table( df: pd.DataFrame, title=None, caption=None, precision=4,
 # =====================================================
 def main() -> None:
     st.set_page_config( page_title='Sige', layout='wide', page_icon=FAVICON, )
-    
     style_subheaders( )
-    st.logo( cfg.LOGO, size='large' )
+    st.logo( LOGO, size='large' )
     st.header( 'Outlay Projector' )
     st.divider( )
     st.markdown( '##### Parameters' )
