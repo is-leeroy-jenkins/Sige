@@ -5,8 +5,20 @@
 
 Sige is a specialized machine learning and time series forecasting tool built for federal analysts, budget officers, and data scientists working with  Treasury Account Symbols (TAS)  and  federal outlays. It combines classical regression, decision trees, gradient boosting, support vector machines, and time series modeling to project **monthly or quarterly outlays** at the Treasury Account level.
 
+## 🎯 Quickstart (Colab)
 
+#### Option A — Google Colab (no local setup)
 
+<a href="https://colab.research.google.com/github/is-leeroy-jenkins/Sige/blob/master/outlays.ipynb" target="_parent">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+![](https://github.com/is-leeroy-jenkins/Sige/blob/master/resources/assets/Sige-nb.gif)
+
+## 🚀 Quickstart (Streamlit)
+
+[![Streamlit App](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white)](https://sige-py.streamlit.app/)
+
+![](https://github.com/is-leeroy-jenkins/Sige/blob/master/resources/assets/sige-demo.gif)
 
 ## 🚀 Features
 
@@ -95,6 +107,12 @@ Sige is a specialized machine learning and time series forecasting tool built fo
 
 ## 📁 How to Use
 
+1. Click the **Open In Colab** badge above.
+2. Upload your CSV or mount Google Drive.
+3. Set `DATA_PATH` near the top of the notebook.
+4. **Runtime → Run all**.
+
+
 #### 🔧 Setup
 
 ```bash
@@ -103,19 +121,6 @@ cd sige
 pip install -r requirements.txt
 jupyter notebook outlays.ipynb
 ```
-
-## 🎯 Quickstart (Colab)
-
-#### Option A — Google Colab (no local setup)
-<a href="https://colab.research.google.com/github/is-leeroy-jenkins/Sige/blob/master/outlays.ipynb" target="_parent">
-<img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-
-![](https://github.com/is-leeroy-jenkins/Sige/blob/master/resources/assets/Sige-nb.gif)
-
-1. Click the **Open In Colab** badge above.
-2. Upload your CSV or mount Google Drive.
-3. Set `DATA_PATH` near the top of the notebook.
-4. **Runtime → Run all**.
 
 #### Option B — Local (conda or venv)
 
@@ -136,12 +141,6 @@ jupyter notebook
 Open `ipynb/sige.ipynb` and run cells top-to-bottom.
 
 
-
-## 🚀 Quickstart (Streamlit)
-
-[![Streamlit App](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white)](https://sige-py.streamlit.app/)
-
-![](https://github.com/is-leeroy-jenkins/Sige/blob/master/resources/assets/Sige-Py.gif)
 
 - This application is delivered as a Streamlit web app (`app.py`) that allows users to upload historical federal outlay data (Excel format), explore trends, and generate multi-model forecasts.
 
