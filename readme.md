@@ -16,9 +16,9 @@ Sige is a specialized machine learning and time series forecasting tool built fo
 
 ## 🚀 Quickstart (Streamlit)
 
-[![Streamlit App](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white)](https://sige-py.streamlit.app/)
-
 ![](https://github.com/is-leeroy-jenkins/Sige/blob/master/resources/assets/img/sige-demo.gif)
+
+[![Streamlit App](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white)](https://sige-py.streamlit.app/)
 
 ## 🚀 Features
 
