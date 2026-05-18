@@ -460,9 +460,6 @@ def main() -> None:
     st.set_page_config( page_title='Sige', layout='wide', page_icon=FAVICON, )
     style_subheaders( )
     st.logo( LOGO, size='large' )
-    st.header( 'Outlay Projector' )
-    st.divider( )
-    st.markdown( '#### Parameters' )
     
     # =====================================================
     # SIDEBAR
@@ -489,85 +486,90 @@ def main() -> None:
         st.divider( )
         min_fy, max_fy = st.slider( 'Training window (Fiscal Years)', min_value=fy_min,
 	        max_value=fy_max, value=(max( fy_min, 2012 ), fy_max), step=1, )
-    
-    # ---------------------- Model controls
-    ana_c1, ana_c2, ana_c3, ana_c4, ana_c5 = st.columns(
-	    [ 0.20, 0.20, 0.20, 0.20, 0.20, ], border=True )
-    with ana_c1:
-	    f1 = st.number_input( 'Future FY #1', value=fy_max + 1, step=1 )
-    
-    with ana_c2:
-	    f2 = st.number_input( 'Future FY #2', value=fy_max + 2, step=1 )
-    
-    with ana_c3:
-	    p = st.number_input( 'ARIMA P', 0, 10, 5 )
-    
-    with ana_c4:
-	    d = st.number_input( 'ARIMA D', 0, 5, 1 )
-    
-    with ana_c5:
-	    q = st.number_input( 'ARIMA Q', 0, 10, 0 )
-
-    # ---------------------- Filters
-    st.markdown( cfg.BLUE_DIVIDER, unsafe_allow_html=True )
-    st.markdown( '#### Filters' )
-    ftr_c1, ftr_c2, ftr_c3 = st.columns( [ 0.33, 0.33, 0.33 ], border=True )
-    with ftr_c1:
-	    agency = None
-	    if 'AgencyName' in df_long.columns:
-		    agency = st.selectbox( 'Agency',
-			    [ '(All)' ] + sorted( df_long[ 'AgencyName' ].dropna( ).unique( ) ), )
-		    if agency == '(All)':
-			    agency = None
-    
-    with ftr_c2:
-	    main_account = None
-	    if agency:
-		    for col in ('MainAccountCode', 'MainAccount'):
-			    if col in df_long.columns:
-				    opts = sorted(
-					    df_long[ df_long[ 'AgencyName' ] == agency ][ col ].dropna( ).unique( ) )
-				    main_account = st.selectbox( 'Main Account', [ '(All)' ] + opts )
-				    if main_account == '(All)':
-					    main_account = None
-			    break
-			    
-	    tas = None
-	    if main_account:
-		    for col in ('TreasuryAccountSymbol', 'TAS'):
-			    if col in df_long.columns:
-				    opts = sorted(
-					    df_long[ (df_long[ 'AgencyName' ] == agency)
-						    & ( df_long[ col.replace( 'TreasuryAccountSymbol', 'MainAccountCode' ) ]
-								    == main_account) ][ col ].dropna( ).unique( ) )
-				    tas = st.selectbox( 'TAS', [ '(All)' ] + opts )
-				    if tas == '(All)':
-					    tas = None
-				    break
-    
-    with ftr_c3:
-	    season = st.number_input( 'HW Seasonal Periods', 1, 20, 5 )
+        
+    left, center, right = st.columns( [ 0.05, 0.9, 0.05 ] )
+    with center:
+	    st.header( 'Outlay Projector' )
+	    st.divider( )
+	    st.markdown( '#### Parameters' )
+	    # ---------------------- Model controls
+	    ana_c1, ana_c2, ana_c3, ana_c4, ana_c5 = st.columns(
+		    [ 0.20, 0.20, 0.20, 0.20, 0.20, ], border=True )
+	    with ana_c1:
+		    f1 = st.number_input( 'Future FY #1', value=fy_max + 1, step=1 )
 	    
-    # ---------------------- Analysis
-    df_filtered = apply_filters( df_long, agency, main_account, tas )
-    df_grouped = aggregate_outlays( df_filtered )
-    
-    forecfg = ForecastConfig( min_fy=min_fy, max_fy=max_fy, future_years=(int( f1 ), int( f2 )), )
-    
-    st.markdown( cfg.BLUE_DIVIDER, unsafe_allow_html=True )
-    st.markdown( '#### Aggregated Outlays' )
-    st.data_editor( df_grouped, use_container_width=True )
-    
-    metrics, forecasts = fit_predict_regressions( df_grouped, forecfg )
-    ts = fit_predict_time_series( df_grouped, forecfg, (p, d, q), season )
-    
-    st.markdown( cfg.BLUE_DIVIDER, unsafe_allow_html=True )
-    st.markdown( '#### Regression Performance' )
-    st.data_editor( metrics, use_container_width=True )
-    
-    st.markdown( cfg.BLUE_DIVIDER, unsafe_allow_html=True )
-    st.markdown( '#### Forecasts')
-    st.data_editor( pd.concat( [ forecasts, ts ], axis=1 ),  use_container_width=True, )
+	    with ana_c2:
+		    f2 = st.number_input( 'Future FY #2', value=fy_max + 2, step=1 )
+	    
+	    with ana_c3:
+		    p = st.number_input( 'ARIMA P', 0, 10, 5 )
+	    
+	    with ana_c4:
+		    d = st.number_input( 'ARIMA D', 0, 5, 1 )
+	    
+	    with ana_c5:
+		    q = st.number_input( 'ARIMA Q', 0, 10, 0 )
+	
+	    # ---------------------- Filters
+	    st.markdown( cfg.BLUE_DIVIDER, unsafe_allow_html=True )
+	    st.markdown( '#### Filters' )
+	    ftr_c1, ftr_c2, ftr_c3 = st.columns( [ 0.33, 0.33, 0.33 ], border=True )
+	    with ftr_c1:
+		    agency = None
+		    if 'AgencyName' in df_long.columns:
+			    agency = st.selectbox( 'Agency',
+				    [ '(All)' ] + sorted( df_long[ 'AgencyName' ].dropna( ).unique( ) ), )
+			    if agency == '(All)':
+				    agency = None
+	    
+	    with ftr_c2:
+		    main_account = None
+		    if agency:
+			    for col in ('MainAccountCode', 'MainAccount'):
+				    if col in df_long.columns:
+					    opts = sorted(
+						    df_long[ df_long[ 'AgencyName' ] == agency ][ col ].dropna( ).unique( ) )
+					    main_account = st.selectbox( 'Main Account', [ '(All)' ] + opts )
+					    if main_account == '(All)':
+						    main_account = None
+				    break
+				    
+		    tas = None
+		    if main_account:
+			    for col in ('TreasuryAccountSymbol', 'TAS'):
+				    if col in df_long.columns:
+					    opts = sorted(
+						    df_long[ (df_long[ 'AgencyName' ] == agency)
+							    & ( df_long[ col.replace( 'TreasuryAccountSymbol', 'MainAccountCode' ) ]
+									    == main_account) ][ col ].dropna( ).unique( ) )
+					    tas = st.selectbox( 'TAS', [ '(All)' ] + opts )
+					    if tas == '(All)':
+						    tas = None
+					    break
+	    
+	    with ftr_c3:
+		    season = st.number_input( 'HW Seasonal Periods', 1, 20, 5 )
+		    
+	    # ---------------------- Analysis
+	    df_filtered = apply_filters( df_long, agency, main_account, tas )
+	    df_grouped = aggregate_outlays( df_filtered )
+	    
+	    forecfg = ForecastConfig( min_fy=min_fy, max_fy=max_fy, future_years=(int( f1 ), int( f2 )), )
+	    
+	    st.markdown( cfg.BLUE_DIVIDER, unsafe_allow_html=True )
+	    st.markdown( '#### Aggregated Outlays' )
+	    st.data_editor( df_grouped, use_container_width=True )
+	    
+	    metrics, forecasts = fit_predict_regressions( df_grouped, forecfg )
+	    ts = fit_predict_time_series( df_grouped, forecfg, (p, d, q), season )
+	    
+	    st.markdown( cfg.BLUE_DIVIDER, unsafe_allow_html=True )
+	    st.markdown( '#### Regression Performance' )
+	    st.data_editor( metrics, use_container_width=True )
+	    
+	    st.markdown( cfg.BLUE_DIVIDER, unsafe_allow_html=True )
+	    st.markdown( '#### Forecasts')
+	    st.data_editor( pd.concat( [ forecasts, ts ], axis=1 ),  use_container_width=True, )
 
 if __name__ == "__main__":
     main()
