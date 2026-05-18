@@ -5,16 +5,15 @@
 
 Sige is a specialized machine learning and time series forecasting tool built for federal analysts, budget officers, and data scientists working with  Treasury Account Symbols (TAS)  and  federal outlays. It combines classical regression, decision trees, gradient boosting, support vector machines, and time series modeling to project **monthly or quarterly outlays** at the Treasury Account level.
 
-## 🎯 Quickstart (Colab)
+## 🎯 Quickstart (Colab) | <a href="https://colab.research.google.com/github/is-leeroy-jenkins/Sige/blob/master/outlays.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
-#### Option A — Google Colab (no local setup)
 
-![](https://github.com/is-leeroy-jenkins/Sige/blob/master/resources/assets/Sige-nb.gif) | <a href="https://colab.research.google.com/github/is-leeroy-jenkins/Sige/blob/master/outlays.ipynb" target="_parent">
-<img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+![](https://github.com/is-leeroy-jenkins/Sige/blob/master/resources/assets/Sige-nb.gif) 
 
-## 🚀 Quickstart (Streamlit)
 
-![](https://github.com/is-leeroy-jenkins/Sige/blob/master/resources/assets/img/sige-demo.gif) | [![Streamlit App](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white)](https://sige-py.streamlit.app/)
+## 🚀 Quickstart (Streamlit) | [![Streamlit App](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white)](https://sige-py.streamlit.app/)
+
+![](https://github.com/is-leeroy-jenkins/Sige/blob/master/resources/assets/img/sige-demo.gif)
 
 ## 🚀 Features
 
