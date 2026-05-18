@@ -47,5 +47,5 @@
 # --------------------------------------------------------------------------------------------------
 LOGO = r'resources/sige_logo.ico'
 FAVICON = r'resources/assets/favicon.ico'
-BLUE_DIVIDER = "<div style='height:2px;align:left;background:#0078FC;margin:6px 0 10px 0;'></div>"
+BLUE_DIVIDER = "<div style='height:2px;align:left;background:#0078FC;margin:6px 30px 30px 0;'></div>"
 DATA = r'data/Budget Outlays.xlsx'

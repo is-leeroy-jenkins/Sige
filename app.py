@@ -509,7 +509,7 @@ def main() -> None:
 	    q = st.number_input( 'ARIMA Q', 0, 10, 0 )
 
     # ---------------------- Filters
-    st.divider( )
+    st.markdown( cfg.BLUE_DIVIDER, unsafe_allow_html=True )
     st.markdown( '##### Filters' )
     ftr_c1, ftr_c2, ftr_c3 = st.columns( [ 0.33, 0.33, 0.33 ], border=True )
     with ftr_c1:
@@ -552,20 +552,20 @@ def main() -> None:
     df_filtered = apply_filters( df_long, agency, main_account, tas )
     df_grouped = aggregate_outlays( df_filtered )
     
-    cfg = ForecastConfig( min_fy=min_fy, max_fy=max_fy, future_years=(int( f1 ), int( f2 )), )
+    forecfg = ForecastConfig( min_fy=min_fy, max_fy=max_fy, future_years=(int( f1 ), int( f2 )), )
     
-    st.divider( )
+    st.markdown( cfg.BLUE_DIVIDER, unsafe_allow_html=True )
     st.markdown( '##### Aggregated Outlays' )
     st.data_editor( df_grouped, use_container_width=True )
     
-    metrics, forecasts = fit_predict_regressions( df_grouped, cfg )
-    ts = fit_predict_time_series( df_grouped, cfg, (p, d, q), season )
+    metrics, forecasts = fit_predict_regressions( df_grouped, forecfg )
+    ts = fit_predict_time_series( df_grouped, forecfg, (p, d, q), season )
     
-    st.divider( )
+    st.markdown( cfg.BLUE_DIVIDER, unsafe_allow_html=True )
     st.markdown( '##### Regression Performance' )
     st.data_editor( metrics, use_container_width=True )
     
-    st.divider( )
+    st.markdown( cfg.BLUE_DIVIDER, unsafe_allow_html=True )
     st.markdown( '##### Forecasts')
     st.data_editor( pd.concat( [ forecasts, ts ], axis=1 ),  use_container_width=True, )
 
