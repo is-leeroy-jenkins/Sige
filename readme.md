@@ -18,6 +18,11 @@ Sige is a specialized machine learning and time series forecasting tool built fo
 
 ![](https://github.com/is-leeroy-jenkins/Sige/blob/master/resources/assets/img/sige-demo.gif)
 
+## 🧱 Databricks
+[![Databricks Notebook](https://img.shields.io/badge/Databricks%20Repo-Sake--Py-FF3621?logo=databricks&logoColor=white)](https://dbc-a0c21f80-7bb3.cloud.databricks.com/editor/notebooks/1460524320197777?o=7474645703081351)
+- A data engineering, analytics, and artificial intelligence collaborative workspace
+- Codebase
+  
 ## 🚀 Features
 
 #### 📈 Full-Funnel Forecasting Pipeline
