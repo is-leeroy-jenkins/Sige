@@ -9,7 +9,7 @@ repo_name: "Sige-Py"
 theme:
   name: material
   language: en
-  logo: imag/sige-logo.png
+  logo: img/sige-logo.png
   favicon: img/favicon.ico
   features:
     - navigation.instant
