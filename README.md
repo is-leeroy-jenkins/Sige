@@ -317,6 +317,17 @@ After a few seconds, Streamlit will open the app automatically in your default w
 | **Z-score / Outlier Tests** | Deviation from standard mean                           | Identify abnormal balances or lapse rates                            |
 | **Boxplots**            | Visual outlier detection                               | Discover obligation anomalies within agencies                        |
 
+## 📁 Customize Dataset
+
+Replace dataset ingestion cell with:
+
+```python
+import pandas as pd
+df = pd.read_csv("your_dataset.csv")
+X = df.drop("target_column", axis=1)
+y = df["target_column"]
+```
+
 ## 🎶 Fine-Tuning 
 
 | File Name                                                                                                                                                                 | Description                                                                                                            |
@@ -394,19 +405,6 @@ git clone https://github.com/your-username/balance-projector.git
 cd balance-projector
 pip install -r requirements.txt
 jupyter notebook balances.ipynb
-```
-
-
-
-## 📁 Customize Dataset
-
-Replace dataset ingestion cell with:
-
-```python
-import pandas as pd
-df = pd.read_csv("your_dataset.csv")
-X = df.drop("target_column", axis=1)
-y = df["target_column"]
 ```
 
 
