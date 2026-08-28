@@ -317,7 +317,7 @@ After a few seconds, Streamlit will open the app automatically in your default w
 | **Z-score / Outlier Tests** | Deviation from standard mean                           | Identify abnormal balances or lapse rates                            |
 | **Boxplots**            | Visual outlier detection                               | Discover obligation anomalies within agencies                        |
 
-## Fine-Tuning Datasets
+## 🎶 Fine-Tuning 
 
 | File Name                                                                                                                                                                 | Description                                                                                                            |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
@@ -352,6 +352,10 @@ After a few seconds, Streamlit will open the app automatically in your default w
 | [Title 31 Code of Federal Regulations – Money and Finance](https://huggingface.co/datasets/leeroy-jankins/Title-31-CFR-Money-and-Finance)                                                                                                                  | Codifies Treasury and federal financial management regulations governing money and finance.                            |
 | [US Standard General Ledger Account Definitions](https://huggingface.co/datasets/leeroy-jankins/US-Standard-General-Ledger-Accounts-And-Definitions)                                                                                                                            | Defines standardized account structures used for federal accounting and financial reporting.                           |
 
+
+## 🧠 Custom LLM
+
+- [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Model-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/leeroy-jankins/models)
 
 
 ## 📦 Dependencies
