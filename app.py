@@ -568,8 +568,8 @@ def main() -> None:
 	    st.data_editor( metrics, use_container_width=True )
 	    
 	    st.markdown( cfg.BLUE_DIVIDER, unsafe_allow_html=True )
-	    st.markdown( '#### Forecasts')
+	    st.markdown( '#### Forecasts' )
 	    st.data_editor( pd.concat( [ forecasts, ts ], axis=1 ),  use_container_width=True, )
 
 if __name__ == "__main__":
-    main()
+    main( )

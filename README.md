@@ -9,37 +9,56 @@ Sige is a specialized machine learning and time series forecasting tool built fo
 ## 🎥 Demo
 
 ![](https://github.com/is-leeroy-jenkins/Sige/blob/master/resources/assets/img/sige-demo.gif)
-___
-
-## 🧊 Azure
-
-[![Containerized](https://img.shields.io/badge/Docker-App-2496ED?logo=docker&logoColor=white)](https://sige.jollyplant-5f24572d.centralus.azurecontainerapps.io)
-- Container App
-
-## 🔥 Streamlit
-
-[![Streamlit App](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white)](https://sige-py.streamlit.app/)
-
-- Web App
-
 
 ___
 
-## ☁️ Google (Colab)   
-
-<a href="https://colab.research.google.com/github/is-leeroy-jenkins/Sige/blob/master/outlays.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-- Jupyter Notebooks
+## Google (Colab)   
 
 ![](https://github.com/is-leeroy-jenkins/Sige/blob/master/resources/assets/Sige-nb.gif) 
 
 
 ___
 
-## 🧱 Databricks
-[![Databricks Notebook](https://img.shields.io/badge/Databricks%20Repo-Sake--Py-FF3621?logo=databricks&logoColor=white)](https://dbc-a0c21f80-7bb3.cloud.databricks.com/editor/notebooks/1460524320197777?o=7474645703081351)
-- A data engineering, analytics, and artificial intelligence collaborative workspace
-- Codebase
-  
+## ☁️ Cloud
+
+<table>
+<tr>
+<td align="center">
+<img width="190" height="1" alt=""><br>
+<a href="https://sige.jollyplant-5f24572d.centralus.azurecontainerapps.io">
+<img src="https://img.shields.io/badge/Docker-App-2496ED?logo=docker&logoColor=white" alt="Docker App">
+</a>
+</td>
+
+<td align="center">
+<img width="190" height="1" alt=""><br>
+<a href="https://sige-py.streamlit.app/">
+<img src="https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white" alt="Streamlit App">
+</a>
+</td>
+
+<td align="center">
+<img width="190" height="1" alt=""><br>
+<a href="https://colab.research.google.com/github/is-leeroy-jenkins/Sige/blob/master/outlays.ipynb">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
+</a>
+</td>
+
+<td align="center">
+<img width="190" height="1" alt=""><br>
+<a href="https://dbc-a0c21f80-7bb3.cloud.databricks.com/browse/folders/3169291152438129?o=7474645703081351">
+<img src="https://img.shields.io/badge/Databricks%20Repo-Sige--Py-FF3621?logo=databricks&logoColor=white" alt="Databricks Notebook">
+</a>
+</td>
+
+<td align="center">
+<a href="https://leeroy.usw-16.palantirfoundry.com/shares/links/dxk6mxqo7j2fg">
+<img width="190" height="1" alt=""><br>
+<img src="https://img.shields.io/badge/Palantir%20Foundry-Repo-101113?logo=palantir&logoColor=white" alt="Palantir Repo">
+</a>
+</td>
+</tr>
+</table>
 ## 🚀 Features
 
 #### 📈 Full-Funnel Forecasting Pipeline
