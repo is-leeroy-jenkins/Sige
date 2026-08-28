@@ -317,6 +317,13 @@ After a few seconds, Streamlit will open the app automatically in your default w
 | **Z-score / Outlier Tests** | Deviation from standard mean                           | Identify abnormal balances or lapse rates                            |
 | **Boxplots**            | Visual outlier detection                               | Discover obligation anomalies within agencies                        |
 
+
+## 💡 Custom Dataset Support
+- Accepts CSVs, Excel files, or Pandas DataFrames
+- Label encoding, numeric coercion, missing data handling
+- Drop-in replacement for datasets via parameter injection
+
+
 ## 📁 Customize Dataset
 
 Replace dataset ingestion cell with:
