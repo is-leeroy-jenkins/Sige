@@ -355,7 +355,7 @@ After a few seconds, Streamlit will open the app automatically in your default w
 
 ## 🧠 Custom LLM
 
-- [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Model-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/leeroy-jankins/models)
+- [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Models-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/leeroy-jankins/models)
 
 
 ## 📦 Dependencies
